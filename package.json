@@ -18,7 +18,6 @@
     "index.js.map"
   ],
   "devDependencies": {
-    "axios": "^0.18.0",
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@vue/test-utils": "^1.0.0-beta.25",
@@ -38,7 +37,6 @@
     "sinon": "^7.1.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "vue": "2.5.17",
-    "vue-axios": "^2.1.4",
     "vue-loader": "^15.4.2",
     "vue-template-compiler": "2.5.17",
     "webpack": "^4.25.1",
