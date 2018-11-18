@@ -31,7 +31,7 @@ Include it in the component you'd like to use it in.
 This will result in a 'Print' button that will trigger the
 printing of the remote image URL.
 
-```
+```vue
 <printer
   printUrl="https://example.com/example.jpg"
   fileName="Example">
@@ -43,7 +43,7 @@ printing of the remote image URL.
 This will add a custom error handler and a custom 'blocked popups'
 messsage, set a custom timeout and will apply a class to the button
 
-```
+```vue
 <printer
   class="my-print-button"
   printUrl="https://example.com/example.png"
@@ -82,7 +82,7 @@ like displaying a toast message or custom error logging functions.
 An example using the `unicorn-vue-toaster` package to add a toast
 message.
 
-```
+```js
 // main.js
 import Vue from 'vue'
 import { ToasterEvents } from 'unicorn-vue-toaster'
@@ -90,7 +90,7 @@ import { ToasterEvents } from 'unicorn-vue-toaster'
 Vue.prototype.$toaster = ToasterEvents
 ```
 
-```
+```vue
 // ParentComponent.vue
 <template>
   <div>
