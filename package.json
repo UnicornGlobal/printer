@@ -1,6 +1,6 @@
 {
   "name": "@unicorn/vue-printer",
-  "description": "Easy printing",
+  "description": "Easy Printing of Remote Images for Vue",
   "version": "1.0.1",
   "author": "Darryn Ten, Steve Ops",
   "private": false,
@@ -18,7 +18,7 @@
     "index.js.map"
   ],
   "devDependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.18.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@vue/test-utils": "^1.0.0-beta.25",
@@ -31,12 +31,12 @@
     "eslint": "^5.6.1",
     "expect": "^23.6.0",
     "istanbul-instrumenter-loader": "^3.0.1",
-    "jsdom": "^12.1.0",
+    "jsdom": "^13.0.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.2.0",
     "mocha-webpack": "^2.0.0-beta.0",
     "nyc": "^13.0.1",
-    "sinon": "^4.0.0",
+    "sinon": "^7.1.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "vue": "2.5.17",
     "vue-axios": "^2.0.2",

@@ -79,6 +79,49 @@ describe('Printer.vue', () => {
     expect(window.URL.revokeObjectURL.called).toBe(false)
   })
 
+  it('Blocks double clicking', async () => {
+    let printer = shallowMount(Printer, {
+      attachToDocument: true,
+      localVue,
+      mocks: {
+        $http: {
+          get: sinon.stub().resolves({
+            data: {},
+            headers: {
+              'content-type': 'image/png'
+            }
+          })
+        }
+      },
+      propsData: {
+        printUrl: 'https://example.com/example.jpg',
+        fileName: 'filename',
+        timeout: 1
+      }
+    })
+
+    window.URL.createObjectURL = sinon.stub().returns('xx')
+    window.URL.revokeObjectURL = sinon.stub().returns(true)
+    window.open = sinon.stub().returns({
+      print: sinon.stub().returns(true)
+    })
+
+    expect(printer.vm.printing).toBe(false)
+    printer.vm.print()
+    expect(printer.vm.printing).toBe(true)
+
+    await printer.vm.print()
+
+    expect(window.URL.createObjectURL.called).toBe(true)
+    expect(window.open.called).toBe(true)
+    expect(window.URL.revokeObjectURL.called).toBe(false)
+
+    setTimeout(() => {
+      expect(printer.vm.printing).toBe(false)
+      expect(window.URL.revokeObjectURL.called).toBe(true)
+    }, 100)
+  })
+
   it('Uses injected error handler if present', async () => {
     const errorHandler = sinon.stub().throws()
 

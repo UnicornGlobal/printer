@@ -94,6 +94,10 @@
     },
     methods: {
       print() {
+        if (this.printing === true) {
+          return
+        }
+
         this.printing = true
 
         /**
