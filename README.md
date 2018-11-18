@@ -1,6 +1,6 @@
 # vue-printer
 
-## Easy printing of remote images for Vue
+#### Easy printing of remote images for Vue
 
 Loads a remote image URL and prompts to print it using the
 browsers native print functionality.
