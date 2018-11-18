@@ -1,0 +1,62 @@
+{
+  "name": "@unicorn/vue-printer",
+  "description": "Easy printing",
+  "version": "1.0.1",
+  "author": "Darryn Ten, Steve Ops",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnicornGlobal/vue-printer"
+  },
+  "files": [
+    "index.js",
+    "index.js.map"
+  ],
+  "devDependencies": {
+    "axios": "^0.17.1",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@vue/test-utils": "^1.0.0-beta.25",
+    "ajv": "^6.5.4",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-istanbul": "^5.0.1",
+    "codecov": "^3.1.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.6.1",
+    "expect": "^23.6.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "jsdom": "^12.1.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.2.0",
+    "mocha-webpack": "^2.0.0-beta.0",
+    "nyc": "^13.0.1",
+    "sinon": "^4.0.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "vue": "2.5.17",
+    "vue-axios": "^2.0.2",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "2.5.17",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "nyc": {
+    "include": [
+      "src/*.vue"
+    ],
+    "instrument": false,
+    "check-coverage": true,
+    "per-file": true,
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "sourceMap": false
+  }
+}
