@@ -1,4 +1,4 @@
-# vue-printer
+# @unicorns/printer
 
 #### Easy printing of remote images for Vue
 
@@ -8,7 +8,7 @@ browsers native print functionality.
 ## Install
 
 ```
-npm install vue-printer --save
+npm install @unicorns/printer --save
 ```
 
 ## Test and Build
@@ -21,7 +21,7 @@ npm run build
 ## Usage
 
 ```
-import Printer from 'vue-printer'
+import Printer from '@unicorns/printer'
 ```
 
 Include it in the component you'd like to use it in.
@@ -104,7 +104,7 @@ Vue.prototype.$toaster = ToasterEvents
 </template>
 
 <script>
-  import Printer from 'vue-printer'
+  import Printer from '@unicorns/printer'
 
   export default {
     components: {
