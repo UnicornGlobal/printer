@@ -13,7 +13,7 @@ module.exports = {
     publicPath: './',
     filename: 'index.js',
     libraryTarget: 'umd',
-    library: 'vue-printer',
+    library: '@unicorns/printer',
     umdNamedDefine: true
   },
   resolve: {
