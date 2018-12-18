@@ -85,7 +85,7 @@ message.
 ```js
 // main.js
 import Vue from 'vue'
-import { ToasterEvents } from '@unicorns/printer'
+import { ToasterEvents } from '@unicorns/toaster'
 
 Vue.prototype.$toaster = ToasterEvents
 ```

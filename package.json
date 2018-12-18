@@ -1,8 +1,8 @@
 {
-  "name": "@unicorn/vue-printer",
+  "name": "@unicorns/printer",
   "description": "Easy Printing of Remote Images for Vue",
-  "version": "1.0.1",
-  "author": "Darryn Ten, Steve Ops",
+  "version": "1.0.2",
+  "author": "Unicorn Global et al",
   "private": false,
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UnicornGlobal/vue-printer"
+    "url": "git+https://github.com/UnicornGlobal/printer"
   },
   "files": [
     "index.js",
