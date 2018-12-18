@@ -79,13 +79,13 @@ You can customise this value with the `timeout` property.
 You can inject a custom error handler so that you can perform actions
 like displaying a toast message or custom error logging functions.
 
-An example using the `unicorn-vue-toaster` package to add a toast
+An example using the `@unicorns/printer` package to add a toast
 message.
 
 ```js
 // main.js
 import Vue from 'vue'
-import { ToasterEvents } from 'unicorn-vue-toaster'
+import { ToasterEvents } from '@unicorns/printer'
 
 Vue.prototype.$toaster = ToasterEvents
 ```
